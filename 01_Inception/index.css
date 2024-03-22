@@ -30,9 +30,6 @@ body {
     color: black;
 }
 
-/* .body {
-    border: 1px solid black;
-} */
 
 .search {
     margin: 1rem 0;
@@ -129,4 +126,39 @@ body {
 
 .costTwo > h3 {
     margin: 6px auto;
+}
+
+.shimmer-card {
+    background-color: #f0f0f0;
+    min-height: 19.8rem;
+    width: 20%;
+    margin: 1rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.shimmer-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.login {
+    cursor: pointer;
+    border: none;
+    background: inherit;
+    font-weight: bold;
+    font-size: medium;
+}
+
+.filter {
+    display: flex;
+    align-items: center;
+    height: inherit;
+    column-gap: 1.5rem;
+}
+
+.filter-btn {
+    align-items: center;
+
 }
