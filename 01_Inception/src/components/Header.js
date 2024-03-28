@@ -1,10 +1,16 @@
 import { useEffect, useState } from "react";
 import { LOGO_URL } from "../utils/constents"
+import { Link } from "react-router-dom";
 
 const Header = () => {
 
   const [btnName, setBtnName] = useState("Login");
 
+  // console.log("Header Rendered")      //This shows whole Header component was reRendered when we click on login/logout button
+
+  useEffect(() => {
+    console.log("useEffect Called")
+  }, [btnName])
   
     return (
       <div className="header">
@@ -14,13 +20,13 @@ const Header = () => {
         <div className="nav-items">
           <ul>
             <li>
-              <a href="#">Home</a>
+              <Link to="/">Home</Link>
             </li>
             <li>
-              <a href="#">About</a>
+            <Link to="/about">About Us</Link>
             </li>
             <li>
-              <a href="#">Contact Us</a>
+            <Link to="/contact">Contact Us</Link>
             </li>
             <li>
               <a href="#">Cart</a>

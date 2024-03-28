@@ -59,3 +59,21 @@ There are two type of Export/Import
     (Normal JS utility functions)
 -   useState() - Superpowerful State Variables in react
 -   useEffect()
+
+
+# Types of Routing in web Apps
+- Client Side Routing
+- Server Side Routing
+
+
+
+
+
+
+
+
+
+
+# Where I have to make change if the API got changed in near future
+- RestaurantMenu.js 
+- Body.js
