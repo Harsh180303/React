@@ -1,4 +1,4 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./components/Header";
 import Body from "./components/Body";
@@ -8,6 +8,15 @@ import Error from "./components/Error";
 import { RouterProvider, createBrowserRouter, Outlet } from "react-router-dom";
 import RestaurantMenu from "./components/RestaurantMenu";
 import RestaurantMenu from "./components/RestaurantMenu";
+
+// Chunking
+// Code Splitting
+// Dynamic Bundeling
+// Lazy Loading
+// Dynamic Loading
+// On demand Loading
+
+const Grocery = lazy(() => import("./components/Grocery"))
 
 const AppLayout = () => {
   return (
@@ -33,6 +42,10 @@ const AppLayout = () => {
         {
           path: "/contact",
           element: <Contact/>
+        },
+        {
+          path: "/grocery",
+          element: <Suspense fallback={<h2>Loading...</h2>}><Grocery/></Suspense>
         },
         {
           path: "/restaurants/:resId",

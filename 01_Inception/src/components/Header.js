@@ -1,10 +1,13 @@
 import { useEffect, useState } from "react";
 import { LOGO_URL } from "../utils/constents"
 import { Link } from "react-router-dom";
+import useOnlineStatus from "../utils/useOnlineStatus";
 
 const Header = () => {
 
   const [btnName, setBtnName] = useState("Login");
+
+  const onlineStatus = useOnlineStatus();
 
   // console.log("Header Rendered")      //This shows whole Header component was reRendered when we click on login/logout button
 
@@ -20,6 +23,9 @@ const Header = () => {
         <div className="nav-items">
           <ul>
             <li>
+              Online Status: {onlineStatus ? "🟢" : "🔴" }
+            </li>
+            <li>
               <Link to="/">Home</Link>
             </li>
             <li>
@@ -27,6 +33,9 @@ const Header = () => {
             </li>
             <li>
             <Link to="/contact">Contact Us</Link>
+            </li>
+            <li>
+            <Link to="/grocery">Grocery</Link>
             </li>
             <li>
               <a href="#">Cart</a>
@@ -42,14 +51,6 @@ const Header = () => {
               {btnName}
             </button>
 
-            {/* <button
-              className="login"
-              onClick={() => {
-                setBtnName("Logout")
-              }}
-            >
-              {btnName}
-            </button> */}
           </ul>
         </div>
       </div>
