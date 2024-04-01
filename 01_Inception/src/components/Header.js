@@ -16,12 +16,12 @@ const Header = () => {
   }, [btnName])
   
     return (
-      <div className="header">
+      <div className="flex justify-between px-8 items-center shadow-md rounded-b-lg mb-4">
         <div className="logo-container">
-          <img className="logo" src={LOGO_URL} />
+          <img className="w-24" src={LOGO_URL} />
         </div>
         <div className="nav-items">
-          <ul>
+          <ul className="flex gap-6 font-bold">
             <li>
               Online Status: {onlineStatus ? "🟢" : "🔴" }
             </li>

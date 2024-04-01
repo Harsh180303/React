@@ -13,6 +13,8 @@ const RestaurantMenu = () => {
     
     const {itemCards} = resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card || 
     resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card;
+
+    console.log("ye wala check karna h",resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards) // ye check ho rha hai
     
     console.log(itemCards)
 
