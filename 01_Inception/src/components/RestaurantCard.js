@@ -1,9 +1,13 @@
+import { useContext } from "react";
 import { CDN_URL } from "../utils/constents";
+import UserContext from "../utils/UserContext";
 
 const RestaurantCard = (props) => {
     const { resData } = props;
   
     const {cloudinaryImageId, name, avgRatingString, cuisines, sla, costForTwo } = resData?.info;
+
+    const { loggedInUser } = useContext(UserContext)
   
     return (
       <div className="res-card w-[18rem] flex flex-col bg-gray-100 hover:bg-gray-300 p-3 rounded-md min-h-[25rem] justify-between">
@@ -25,6 +29,11 @@ const RestaurantCard = (props) => {
   
         <div className="font-bold text-lg pt-1">
           <h3>{costForTwo}</h3>
+        </div>
+
+        {/* neeche wali div koi kamki nahi hai jald se jald hatana hai */}
+        <div className="font-bold text-lg pt-1">
+          <h3>User : {loggedInUser}</h3>
         </div>
   
         <button className=" bg-gradient-to-r from-[#EF6027] to-[#ffb01e] px-2 py-1 w-[12rem] mx-auto font-bold text-white mt-1 rounded-md">Order Now</button>

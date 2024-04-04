@@ -1,9 +1,10 @@
 import RestaurantCard from "./RestaurantCard";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import { MENU_API  } from "../utils/constents";
+import UserContext from "../utils/UserContext";
 
 const Body = () => {
 
@@ -36,6 +37,8 @@ const Body = () => {
   return (
     <h1>It seems you are offline... <br/>Please Check your Internet Connection and try again</h1>
   )
+
+  const { loggedInUser, setUserName } = useContext(UserContext)
   
   // Conditional Operation 
     return listOfRestaurants.length === 0 ? (
@@ -80,6 +83,15 @@ const Body = () => {
           >
             Top Rated
           </button>
+
+          <div>
+            <label className="font-bold ">User Name : </label>
+            <input 
+            className="bg-gray-100 px-1.5 py-1 rounded-md font-medium"
+            value={loggedInUser}
+            onChange={(e) => setUserName(e.target.value)}
+            />
+          </div>
         </div>
 
         <div className="flex flex-wrap justify-evenly py-12 gap-y-10">

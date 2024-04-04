@@ -1,7 +1,8 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { LOGO_URL } from "../utils/constents"
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import UserContext from "../utils/UserContext";
 
 const Header = () => {
 
@@ -9,11 +10,9 @@ const Header = () => {
 
   const onlineStatus = useOnlineStatus();
 
-  // console.log("Header Rendered")      //This shows whole Header component was reRendered when we click on login/logout button
+  const { loggedInUser } = useContext(UserContext);
 
-  useEffect(() => {
-    console.log("useEffect Called")
-  }, [btnName])
+  // console.log(data)      //checking the data 
   
     return (
       <div className="flex justify-between px-8 items-center shadow-md rounded-b-lg mb-4">
@@ -50,6 +49,8 @@ const Header = () => {
             >
               {btnName}
             </button>
+
+            <li className="font-bold">{loggedInUser}</li>
 
           </ul>
         </div>
