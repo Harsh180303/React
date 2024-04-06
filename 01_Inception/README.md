@@ -66,11 +66,13 @@ There are two type of Export/Import
 - Server Side Routing
 
 
-
-
-
-
-
+# Redux Toolkit
+- Install @reduxjs/toolkit and react-redux
+- Build our store
+- Connectt our store to our app
+- Slice (cartSlice)
+- dispatch (action)
+- Selector
 
 
 
