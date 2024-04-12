@@ -79,3 +79,22 @@ There are two type of Export/Import
 # Where I have to make change if the API got changed in near future
 - RestaurantMenu.js 
 - Body.js
+
+
+# Types of Testing (Developer)
+ - Unit Testing
+ - Integration Testing
+ - End to End Testing - e2e Testing
+  
+
+# Setting up Testing in Our App
+ - Install React Testing Librery (RTL)
+ - Installed Jest
+ - Installed Babel Dependencies
+ - Configured Babel
+ - Configure Parcel Config file to disable default babel transpilation
+ - Jest configuration  (Jest - npx jest --init)
+ - Install jsdom librery
+ - Install @babel/preset-react - to make JSX work in test cases
+ - Include @babel/preset-react inside my babel config
+ - npm i -D @testing-library/jest-dom

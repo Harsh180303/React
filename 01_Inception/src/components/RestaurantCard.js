@@ -10,7 +10,8 @@ const RestaurantCard = (props) => {
     const { loggedInUser } = useContext(UserContext)
   
     return (
-      <div className="res-card w-[18rem] flex flex-col bg-gray-100 hover:bg-gray-300 p-3 rounded-md min-h-[25rem] justify-between">
+      <div data-testid="resCard"
+      className="res-card w-[18rem] flex flex-col bg-gray-100 hover:bg-gray-300 p-3 rounded-md min-h-[25rem] justify-between">
         <img
           className="card-img h-[10rem] object-cover rounded-md"
           alt="Image not found!"

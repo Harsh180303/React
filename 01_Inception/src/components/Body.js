@@ -14,7 +14,7 @@ const Body = () => {
 
   const [searchText, setSearchText] = useState("");
 
-  console.log("list of Res-tro-wn", listOfRestaurants)
+  // console.log("list of Restourants", listOfRestaurants)
 
   useEffect(() => {            //Ye bad mai render hota hai
     fetchData();
@@ -50,6 +50,7 @@ const Body = () => {
             <input
               className=" outline-none w-52 rounded-md px-1.5 py-1 placeholder:text-[#EF6027] bg-gray-100"
               type="search"
+              data-testid="searchInput"
               placeholder="Search..."
               value={searchText}
               onChange={(e) => {
